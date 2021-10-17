@@ -1,0 +1,25 @@
+{
+  "name": "tailwindcsscomponent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build -i src/css/tailwind.min.css -o public/css/tailwind.min.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammadanarul/TailwindCSSComponent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammadanarul/TailwindCSSComponent/issues"
+  },
+  "homepage": "https://github.com/mohammadanarul/TailwindCSSComponent#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.17"
+  }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind css Collapse</title>
+    <link rel="stylesheet" href="../../public/css/tailwind.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gray-300">
+    <div class="container mt-6">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-8">
+                <div class="bg-white shadow-md rounded-md px-8 py-4">
+                    <!-- Desctiption -->
+                    <section>
+                        <h5 class="font-bold text-xl text-gray-600">Description</h5>
+
+                        <div>
+                            <p class="text-gray-400 pt-3">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vel voluptates ipsam magni
+                                mollitia neque possimus omnis maiores et illo repellendus reprehenderit harum,
+                                reiciendis velit! Asperiores nisi ducimus voluptatibus qui labore temporibus iste
+                                dignissimos veniam? Exercitationem itaque eius molestiae cupiditate quasi laboriosam ab
+                                laudantium sit excepturi quae soluta fuga, aliquid doloribus eligendi ipsa. Ipsa rerum,
+                                accusantium inventore aut doloremque libero enim et quod quia doloribus? Ex at, fugiat
+                                perspiciatis iusto quam asperiores omnis consequuntur cupiditate quaerat accusamus
+                                expedita numquam minus animi, sit ipsum quas ullam illum quos. Iure iste deserunt vero
+                                enim veniam sit! Et necessitatibus laudantium consequuntur unde repudiandae!
+                            </p>
+                        </div>
+                    </section>
+                    <!-- End Desvription -->
+                    <!-- start requrements -->
+                    <section>
+                        <h5 class="font-bold text-xl text-gray-600 pt-6">Requrements</h5>
+
+                        <div class="pt-3">
+                            <ul class="text-gray-400 list-inside list-disc">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing </li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <h3 class="font-bold text-xl text-gray-700 py-6">Course Curriculum</h3>
+
+                <!-- course curriculum -->
+                <div class="shadow-md rounded-md bg-white px-8 py-4">
+                    <!-- single curriculum -->
+                    <div class="relative overflow-hidden course-curriculum" x-data="{selected:null}">
+                        <div class="flex items-center">
+                            <input type="checkbox"
+                                class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
+                                @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div>
+                                <h1 class="text-xl font-bold text-red-400 py-3">Course Overview</h1>
+                            </div>
+                            <div class="
+                        absolute top-3 right-3 
+                        text-red-400 transition-transform
+                        duration-500 rotate-0
+                        peer-checked:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="pl-8 overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40"
+                            x-ref="container1"
+                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <ul class="text-gray-400 list-inside space-y-2 list-decimal">
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end single curriculum -->
+
+                    <!-- single curriculum -->
+                    <div class="relative overflow-hidden course-curriculum" x-data="{selected:null}">
+                        <div class="flex items-center">
+                            <input type="checkbox"
+                                class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
+                                @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div>
+                                <h1 class="text-xl font-bold text-red-400 py-3">Course Overview</h1>
+                            </div>
+                            <div class="
+                        absolute top-3 right-3 
+                        text-red-400 transition-transform
+                        duration-500 rotate-0
+                        peer-checked:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="pl-8 overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40"
+                            x-ref="container1"
+                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <ul class="text-gray-400 list-inside space-y-2 list-decimal">
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end single curriculum -->
+
+                    <!-- single curriculum -->
+                    <div class="relative overflow-hidden course-curriculum" x-data="{selected:null}">
+                        <div class="flex items-center">
+                            <input type="checkbox"
+                                class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
+                                @click="selected !== 1 ? selected = 1 : selected = null">
+                            <div>
+                                <h1 class="text-xl font-bold text-red-400 py-3">Your First webpage</h1>
+                            </div>
+                            <div class="
+                        absolute top-3 right-3 
+                        text-red-400 transition-transform
+                        duration-500 rotate-0
+                        peer-checked:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="pl-8 overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40"
+                            x-ref="container1"
+                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                            <ul class="text-gray-400 list-inside space-y-2 list-decimal">
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                                <li class="hover:text-red-400"><a href="#">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end single curriculum -->
+                </div>
+            </div>
+            <div class="col-span-4">
+                <div class="bg-white shadow:md rounded-md p-4">
+                    4
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
